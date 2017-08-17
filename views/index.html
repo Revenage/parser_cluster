@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parser</title>
+</head>
+<body>
+    <div>
+        <textarea id="input" name="name" rows="8" cols="80">
+            215 60 17 зимние шины
+            215 60 17 летние шины
+            215 65 16 зимние шины
+            215 65 16 зимние шины купить
+            215 65 16 летние шины
+            215 65 16 летние шины купить
+            225 50 17 зимние шины
+            225 55 18 летние шины
+            225 55 18 летние шины купить
+            225 60 17 зимние шины
+            225 60 17 летние шины
+            225 60 18 летние шины
+            225 65 17 зимние шины
+            225 65 17 летние шины
+            225 70 16 зимние шины
+            235 45 17 шины лето
+            235 55 17 летние шины
+            235 55 20 шины зимние
+            235 60 18 шины лето
+            235 65 17 зимние шины
+            235 65 17 шины летние
+            255 50 19 летние шины
+            255 55 18 летние шины
+            265 65 17 летние шины
+            265 70 16 шины купить
+        </textarea>
+
+    </div>
+    <div>
+        <input type="text" id="host">
+    </div>
+    <div>
+        <span>Order</span>
+        <div>
+            <span id="enter"></span>
+        </div>
+        <div id='order'>
+
+        </div>
+        <div>
+            <span id="exit"></span>
+        </div>
+    </div>
+    <div>
+        <button id="preparse">PREPARSE</button>
+        <button id="parse">PARSE</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <th>#</th>
+                <th>Result</th>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
