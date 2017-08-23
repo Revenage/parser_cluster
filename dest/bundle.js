@@ -10342,15 +10342,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: 'getSettings',
             value: function getSettings(orderHolder) {
+
                 var settings = [];
-                console.log(orderHolder);
-                orderHolder.children()[0].children().each(function (div) {
-                    console.log(div);
+                (0, _jquery2.default)('#order_holder tr').each(function () {
                     var obj = {};
-                    div.children().each(function (input) {
-                        var attr = input.attr();
-                        console.log(attr);
-                    });
+                    $this = (0, _jquery2.default)(this);
+                    var input = $this.find('input').val();
+                    console.log(input, 666);
                     settings.push(obj);
                 });
 
@@ -10360,8 +10358,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             key: 'preparse',
             value: function preparse() {
                 var order = (0, _jquery2.default)('#order_holder');
-                if (order.length) {
-                    this.getSettings(order);
+                if (order) {
+                    this.getSettings();
                 }
                 this.renderOrder();
             }

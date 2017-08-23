@@ -73,15 +73,13 @@ $(function() {
         }
 
         getSettings(orderHolder) {
+
             let settings = []
-            console.log(orderHolder);
-            orderHolder.children()[0].children().each(div => {
-                console.log(div);
+            $('#order_holder tr').each(function () {
                 let obj = {};
-                div.children().each(input => {
-                    const attr = input.attr();
-                    console.log(attr);
-                })
+                $this = $(this);
+                const input = $this.find('input').val();
+                console.log(input, 666)
                 settings.push(obj)
             })
 
@@ -90,8 +88,8 @@ $(function() {
 
         preparse() {
             const order = $('#order_holder');
-            if (order.length) {
-                this.getSettings(order);
+            if (order) {
+                this.getSettings();
             }
             this.renderOrder();
         }
